@@ -114,12 +114,27 @@ sup {
   font-size:14px
 }
 .sidebar-links a {
-  width:fit-content
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:100%;
+  max-width:180px;
+  padding:7px 12px;
+  border:1px solid #ecdcd1;
+  border-radius:5px;
+  background:#faf3ee;
+  color:var(--accent);
+  font-weight:500;
+  transition:background .2s,border-color .2s
+}
+.sidebar-links a:hover {
+  background:#f3e4da;
+  border-color:#d8b7a2
 }
 .sidebar-links span {
   font-size:12px;
-  margin-left:5px;
-  color:var(--muted)
+  margin-left:8px;
+  color:inherit
 }
 .sidebar-note {
   margin-top:35px;
@@ -479,8 +494,13 @@ footer {
 }
 .sidebar-links {
   display:flex;
-  gap:22px;
+  flex-wrap:wrap;
+  gap:8px;
   font-size:12px
+}
+.sidebar-links a {
+  width:auto;
+  max-width:none
 }
 .sidebar-links span {
   margin-left:1px
